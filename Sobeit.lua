@@ -65,7 +65,7 @@ gg.searchNumber('0.008', gg.TYPE_FLOAT)
 gg.getResults(2500)
 gg.editAll('0.0002', gg.TYPE_FLOAT)
 gg.clearResults()
-print('▶ GRAVITY-FUCKER Activated!');
+print('▶ GRAVITY-FUCKER Activated!')
 end
 
 if menu == 9 then
@@ -73,5 +73,5 @@ gg.searchNumber('0.0002', gg.TYPE_FLOAT)
 gg.getResults(2500)
 gg.editAll('0.008', gg.TYPE_FLOAT)
 gg.clearResults()
-print('▶ GRAVITY-FUCKER Deactivated!');
+print('▶ GRAVITY-FUCKER Deactivated!')
 end

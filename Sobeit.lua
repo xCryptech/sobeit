@@ -1,5 +1,5 @@
 -- Sobeit for SA:MP Android
--- Version: 0.1.0
+-- Version: 0.1.1
 -- Author: xCryptech
 -- VK: https://vk.com/id493399429
 -- GitHub: https://github.com/xCryptech/sobeit
@@ -19,7 +19,11 @@ menu = gg.choice({
 	"🌟 FPV [ON]",
 	"🌠 FPV [OFF]",
 	"💥 Teleport (BETA)",
-	"👻 FLY-HACK (EMPTY)",
+	"👻 LONG-JUMP (BETA)",
+	"🚑 GM-CAR [ON]",
+	"🚘 GM-CAR [OFF]",
+	"💣 BOOM-CAR (BETA)",
+	"🔫 PIZDARVANKA (BETA)",
 },nil,"▶ Sobeit by xCryptech ◀")
 
 if menu == 1 then
@@ -123,6 +127,13 @@ menu2 = gg.choice({
 	"👽 Fermer (Job)",
 	"💀 Driving School",
 },nil,"▶ Select a TP point◀")
+
+gg.searchNumber('0.008', gg.TYPE_FLOAT)
+gg.getResults(2500)
+gg.editAll('-1.753781', gg.TYPE_FLOAT)
+gg.sleep(1000)
+gg.editAll('0.008', gg.TYPE_FLOAT)
+gg.clearResults()
 
  -- Airport spawn:
  sx = '1655.5~1755.5'
@@ -254,5 +265,58 @@ end
 end
 
 if menu == 14 then
-gg.toast('This cheat is empty');
+gg.searchNumber('0.008', gg.TYPE_FLOAT)
+gg.getResults(2500)
+gg.editAll('-0.00005', gg.TYPE_FLOAT)
+for i = 0, 2500 do
+gg.getResults(2500)
+gg.editAll('0.0001', gg.TYPE_FLOAT)
+gg.sleep(500)
+gg.editAll('0.0003', gg.TYPE_FLOAT)
+gg.sleep(2550)
+gg.editAll('0.008', gg.TYPE_FLOAT)
+end
+print('▶ LONG-JUMP Activated!')
+end
+
+if menu == 15 then
+gg.searchNumber('1000', gg.TYPE_FLOAT);
+gg.getResults(2500)
+gg.editAll(50000000.058482, gg.TYPE_FLOAT)
+gg.clearResults()
+print('▶ GOD-MODE (for vehicle) Activated!')
+end
+
+if menu == 16 then
+gg.searchNumber('49959999.058482~50000000.058482', gg.TYPE_FLOAT);
+gg.getResults(2500)
+gg.editAll(1500, gg.TYPE_FLOAT)
+gg.clearResults()
+print('▶ GOD-MODE (for vehicle) Deactivated!')
+end
+
+if menu == 17 then
+gg.searchNumber('1000', gg.TYPE_FLOAT);
+gg.getResults(2500)
+gg.editAll(0, gg.TYPE_FLOAT)
+gg.clearResults()
+print('▶ BOOM-CAR Activated!')
+end
+
+if menu == 18 then
+for i = 0, 2500 do
+gg.searchNumber('0.008', gg.TYPE_FLOAT)
+gg.getResults(2500)
+gg.editAll('0.0001', gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber('1000', gg.TYPE_FLOAT);
+gg.getResults(25000)
+gg.editAll(0, gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber('0.0001', gg.TYPE_FLOAT)
+gg.getResults(2500)
+gg.editAll('0.008', gg.TYPE_FLOAT)
+gg.clearResults()
+end
+print('▶ PIZDARVANKA Activated!')
 end

@@ -1,5 +1,5 @@
 -- Sobeit for SA:MP Android
--- Version: 0.1.1
+-- Version: 0.1.2
 -- Author: xCryptech
 -- VK: https://vk.com/id493399429
 -- GitHub: https://github.com/xCryptech/sobeit
@@ -24,6 +24,14 @@ menu = gg.choice({
 	"🚘 GM-CAR [OFF]",
 	"💣 BOOM-CAR (BETA)",
 	"🔫 PIZDARVANKA (BETA)",
+	"🏃 HIGH-JUMP [ON]",
+	"🏄 HIGH-JUMP [OFF]",
+	"🏇 INFINITY-SPRINT [ON]",
+	"🐎 INFINITY-SPRINT [OFF]",
+	"🌅 WALL-HACK [ON]",
+	"🌄 WALL-HACK [OFF]",
+	"🛀 WORM [ON]",
+	"🛁 WORM [OFF]",
 },nil,"▶ Sobeit by xCryptech ◀")
 
 if menu == 1 then
@@ -117,149 +125,24 @@ print('▶ FPV Deactivated!')
 end
 
 if menu == 13 then
+gg.alert('▶ Disable WI-FI before intervening so that a reconnect takes place and has a view of the beach, after that, you can turn on WI-FI again and use the received coordinates.')
 menu2 = gg.choice({
-	"🚃 Bus Parking",
-	"🏁 Taxi Park",
-	"🏯 City Hall LS (1)",
-	"🚗 City Hall LS (2)",
-	"👹 Mover (Job)",
-	"👺 Scavenger (Job)",
-	"👽 Fermer (Job)",
-	"💀 Driving School",
-},nil,"▶ Select a TP point◀")
+	"🌇  Get Coordinates",
+},nil,"▶ Select ◀")
 
-gg.searchNumber('0.008', gg.TYPE_FLOAT)
-gg.getResults(2500)
-gg.editAll('-1.753781', gg.TYPE_FLOAT)
-gg.sleep(1000)
-gg.editAll('0.008', gg.TYPE_FLOAT)
-gg.clearResults()
-
- -- Airport spawn:
- sx = '1655.5~1755.5'
- sz = '-2310.5~-2210.5'
- --Bus parking spawn:
- --sx = '1085.5~1185.5'
- --sz = '-1875.5~-1775.5'
- -- Unity Station spawn:
- --sx = '1685.5~1785.5'
- --sz = '-1925.5~-1785.5'
- 
-gg.searchNumber(sx, gg.TYPE_FLOAT)
-gg.getResults(25000)
-gg.editAll('1457.518934', gg.TYPE_FLOAT)
-gg.clearResults()
-x = 1457.518934
-
-gg.searchNumber(sz, gg.TYPE_FLOAT)
-gg.getResults(25000)
-gg.editAll('1955.144858', gg.TYPE_FLOAT)
-gg.clearResults()
-z = 1955.144858
-
------- Positions ------
 if menu2 == 1 then
--- Bus Parking
-gg.searchNumber(x, gg.TYPE_AUTO)
-gg.getResults(5000)
-gg.editAll('1111', gg.TYPE_FLOAT)
+gg.searchNumber('1093.40002441406', gg.TYPE_FLOAT)
+tx = gg.getResults(2500)
+gg.addListItems(tx)
 gg.clearResults()
-gg.searchNumber(z, gg.TYPE_AUTO)
-gg.getResults(5000)
-gg.editAll('-1807', gg.TYPE_FLOAT)
+gg.searchNumber('82.71060180664', gg.TYPE_FLOAT)
+ty = gg.getResults(2500)
+gg.addListItems(ty)
 gg.clearResults()
-print('▶ You have been successfully teleported!')
-end
-
-if menu2 == 2 then
--- Taxi Park
-gg.searchNumber(x, gg.TYPE_AUTO)
-gg.getResults(5000)
-gg.editAll('1751', gg.TYPE_FLOAT)
+gg.searchNumber('-2036.5', gg.TYPE_FLOAT)
+tz = gg.getResults(2500)
+gg.addListItems(tz)
 gg.clearResults()
-gg.searchNumber(z, gg.TYPE_AUTO)
-gg.getResults(5000)
-gg.editAll('-1884', gg.TYPE_FLOAT)
-gg.clearResults()
-print('▶ You have been successfully teleported!')
-end
-
-if menu2 == 3 then
--- City Hall (1)
-gg.searchNumber(x, gg.TYPE_AUTO)
-gg.getResults(5000)
-gg.editAll('1481', gg.TYPE_FLOAT)
-gg.clearResults()
-gg.searchNumber(z, gg.TYPE_AUTO)
-gg.getResults(5000)
-gg.editAll('-1723', gg.TYPE_FLOAT)
-gg.clearResults()
-print('▶ You have been successfully teleported!')
-end
-
-if menu2 == 4 then
--- City Hall (2)
-gg.searchNumber(x, gg.TYPE_AUTO)
-gg.getResults(5000)
-gg.editAll('1435', gg.TYPE_FLOAT)
-gg.clearResults()
-gg.searchNumber(z, gg.TYPE_AUTO)
-gg.getResults(5000)
-gg.editAll('-1841', gg.TYPE_FLOAT)
-gg.clearResults()
-print('▶ You have been successfully teleported!')
-end
-
-if menu2 == 5 then
--- Mover (Job)
-gg.searchNumber(x, gg.TYPE_AUTO)
-gg.getResults(5000)
-gg.editAll('1965', gg.TYPE_FLOAT)
-gg.clearResults()
-gg.searchNumber(z, gg.TYPE_AUTO)
-gg.getResults(5000)
-gg.editAll('-1969', gg.TYPE_FLOAT)
-gg.clearResults()
-print('▶ You have been successfully teleported!')
-end
-
-if menu2 == 6 then
--- Scavenger (Job)
-gg.searchNumber(x, gg.TYPE_AUTO)
-gg.getResults(5000)
-gg.editAll('2191', gg.TYPE_FLOAT)
-gg.clearResults()
-gg.searchNumber(z, gg.TYPE_AUTO)
-gg.getResults(5000)
-gg.editAll('-1975', gg.TYPE_FLOAT)
-gg.clearResults()
-print('▶ You have been successfully teleported!')
-end
-
-if menu2 == 7 then
--- Fermer (Job)
-gg.searchNumber(x, gg.TYPE_AUTO)
-gg.getResults(5000)
-gg.editAll('-154', gg.TYPE_FLOAT)
-gg.clearResults()
-gg.searchNumber(z, gg.TYPE_AUTO)
-gg.getResults(5000)
-gg.editAll('-1394', gg.TYPE_FLOAT)
-gg.clearResults()
-print('▶ You have been successfully teleported!')
-end
-
-if menu2 == 8 then
--- Driving school
-gg.searchNumber(x, gg.TYPE_AUTO)
-gg.getResults(5000)
-gg.editAll('-2025', gg.TYPE_FLOAT)
-gg.clearResults()
-gg.searchNumber(z, gg.TYPE_AUTO)
-gg.getResults(5000)
-gg.editAll('-84', gg.TYPE_FLOAT)
-gg.clearResults()
-print('▶ You have been successfully teleported!')
 end
 
 end
@@ -319,4 +202,72 @@ gg.editAll('0.008', gg.TYPE_FLOAT)
 gg.clearResults()
 end
 print('▶ PIZDARVANKA Activated!')
+end
+
+if menu == 19 then
+gg.searchNumber('70', gg.TYPE_FLOAT)
+gg.getResults(100)
+gg.editAll('0.473', gg.TYPE_FLOAT)
+gg.clearResults()
+print('▶ HIGH-JUMP Activated!')
+end
+
+if menu == 20 then
+gg.searchNumber('0.473', gg.TYPE_FLOAT)
+gg.getResults(100)
+gg.editAll('70', gg.TYPE_FLOAT)
+gg.clearResults()
+print('▶ HIGH-JUMP Deactivated!')
+end
+
+if menu == 21 then
+gg.searchNumber('3147', gg.TYPE_FLOAT)
+gg.getResults(2)
+gg.editAll('9999999999', gg.TYPE_FLOAT)
+gg.clearResults()
+print('▶ INFINITY-SPRINT Activated!')
+end
+
+if menu == 22 then
+gg.searchNumber('9999999999', gg.TYPE_FLOAT)
+gg.getResults(2)
+gg.editAll('3147', gg.TYPE_FLOAT)
+gg.clearResults()
+print('▶ INFINITY-SPRINT Deactivated!')
+end
+
+if menu == 23 then
+gg.setRanges(gg.REGION_CODE_APP)
+gg.searchNumber('60', gg.TYPE_FLOAT)
+gg.getResults(10)
+gg.editAll('18.9', gg.TYPE_FLOAT)
+gg.clearResults()
+print('▶ WALL-HACK Activated!')
+end
+
+if menu == 24 then
+gg.setRanges(gg.REGION_CODE_APP)
+gg.searchNumber('18.9', gg.TYPE_FLOAT)
+gg.getResults(10)
+gg.editAll('60', gg.TYPE_FLOAT)
+gg.clearResults()
+print('▶ WALL-HACK Dectivated!')
+end
+
+if menu == 25 then
+gg.setRanges(gg.REGION_CODE_APP)
+gg.searchNumber('60', gg.TYPE_FLOAT)
+gg.getResults(2500)
+gg.editAll('18.9', gg.TYPE_FLOAT)
+gg.clearResults()
+print('▶ WORM Activated!')
+end
+
+if menu == 26 then
+gg.setRanges(gg.REGION_CODE_APP)
+gg.searchNumber('18.9', gg.TYPE_FLOAT)
+gg.getResults(2500)
+gg.editAll('60', gg.TYPE_FLOAT)
+gg.clearResults()
+print('▶ WORM Dectivated!')
 end
